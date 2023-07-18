@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Arbutus Slab' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src=".\recipe.js"></script>
+    <link rel="stylesheet" media="screen" href="./recipe.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#home"><b>FOOD RECIPIES</b></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#title1"><span class="fa fa-share-alt"></span> Category </a></li>
+                    <li><a href="#title2"><span class="fa fa-plus"></span> New recipies</a></li>
+                    <li><a href="#title3"><span class="fa fa-image"></span> Gallery</a></li>
+                    <li><a href="#title4"><span class="fa fa-user"></span> About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="home">
+        <div class="top-image">
+            <div class="search-container">
+                <input type="text" id="search-input" class="search" placeholder="Search for recipe">
+                <button id="search-button" class="fa fa-user" style="color:#9463cc"></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="title1">
+        <h2 class="title1" style="text-align: center;">CATEGORY</h2>
+        <div id="category" class="category">
+            <div class="category-card">
+                <img src="vegfront.jpg" alt="Image">
+                <h3>Vegetarian recipies</h3>
+                <a href="#veg"><button id="view-recipe-btn" class="view-recipe-btn">View</button></a>
+            </div>
+
+            <div class="category-card">
+                <img src="nonvegfront.jpg" alt="Image">
+                <h3>Non-Vegetarian recipies</h3>
+                <a href="#nonveg"><button id="view-recipe-btn" class="view-recipe-btn">View</button></a>
+            </div>
+
+            <div class="category-card">
+                <img src="breakfastfront.jpg" alt="Image">
+                <h3>Breakfast recipies</h3>
+                <a href="#breakfast"><button id="view-recipe-btn" class="view-recipe-btn">View</button></a>
+            </div>
+
+            <div class="category-card">
+                <img src="snacksfront.jpg" alt="Image">
+                <h3>Snacks recipies</h3>
+                <a href="#snacks"><button id="view-recipe-btn" class="view-btn">View</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="title2">
+        <div class="container mt-4">
+            <h2 style="text-align: center;">ADD RECIPE</h2>
+            <div id="card-container">
+                <form id="recipe-form">
+                    <div class="form-group">
+                        <label for="image">Insert Image</label>
+                        <input id="imageInput1" type="file">
+                    </div>
+                    <img id="previewImage" src="#" alt="Preview Image" style="display: none;">
+
+                    <div class="form-group">
+                        <label for="title">Recipe Name</label>
+                        <input type="text" id="title" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Steps to follow</label>
+                        <textarea style="margin-top:5px;" class="form-control" rows="3" id="description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="ingredients">Ingredients</label>
+                        <input type="text" id="ingredients" class="form-control">
+                    </div>
+                    <br>
+                    <input type="submit" value="Add Recipe" class="submit-btn">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="title3">
+        <h2>POPULAR RECIPIES</h2>
+        <div id="popularimg">
+            <div><a href="#vpop1"><img src="veg1.jpg" class="popularimg"></a></div>
+            <div><a href="#nvpop4"><img src="nv4.jpg" class="popularimg"></a></div>
+            <div><a href="#vpop12"><img src="veg12.jpg" class="popularimg"></a></div>
+            <div><a href="#nvpop2"><img src="nv2.jpg" class="popularimg"></a></div>
+            <div><a href="#vpop7"><img src="veg7.jpg" class="popularimg"></a></div>
+            <div><a href="#nvpop8"><img src="nv8.jpg" class="popularimg"></a></div>
+            <div><a href="#vpop9"><img src="veg9.jpg" class="popularimg"></a></div>
+            <div><a href="#nvpop10"><img src="nv10.jpg" class="popularimg"></a></div>
+            <div><a href="#vpop11"><img src="veg11.jpg" class="popularimg"></a></div>
+            <div><a href="#nvpop4"><img src="nv4.jpg" class="popularimg"></a></div>
+        </div>
+    </div>
+
+    <div id="veg">
+        <h2 style="text-align: center;">VEGETARIAN RECEIPIES</h2>
+
+        <section class="recipe-listings">
+
+            <div class="recipe-card" id="vpop1">
+                <img src="veg1.jpg" alt="recipe 2">
+                <h2>Cauliflower Tartine With Romesco Sauce</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="vpop2">
+                <img src="veg2.jpg" alt="recipe 2">
+                <h2>Meatless Meatball Subs</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="vpop3">
+                <img src="veg3.jpg" alt="recipe 2">
+                <h2>Mushroom White Pizza </h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="vpop4">
+                <img src="veg4.jpg" alt="recipe 2">
+                <h2>Slow Cooker Vegetarian Chili With Sweet Potatoes</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="vpop5">
+                <img src="veg5.jpg" alt="recipe 2">
+                <h2>Thai Curry Vegetable and Tofu Soup</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="vpop6">
+                <img src="veg6.jpg" alt="recipe 2">
+                <h2>Roasted Eggplant With Miso and Sesame Seeds</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="vpop7">
+                <img src="veg7.jpg" alt="recipe 2">
+                <h2>Red Lentil Curry</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="vpop8">
+                <img src="veg8.jpg" alt="recipe 2">
+                <h2>Roasted Eggplant and Olive Pasta Salad</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="vpop9">
+                <img src="veg9.jpg" alt="recipe 2">
+                <h2>Vegetarian Tacos With Goat Cheese</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="vpop10">
+                <img src="veg10.jpg" alt="recipe 2">
+                <h2>Parm e Pepe Spaghetti</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="vpop11">
+                <img src="veg11.jpg" alt="recipe 2">
+                <h2>Superfood Lentil Salad</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="vpop12">
+                <img src="veg12.jpg" alt="recipe 2">
+                <h2>Black Bean and Oat Burger</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+        </section>
+    </div>
+
+    <div id="nonveg">
+
+        <h2 style="text-align: center;">NON-VEGETARIAN RECEIPIES</h2>
+
+        <section class="recipe-listings" class="nv">
+            <div class="recipe-card" id="nvpop1">
+                <img src="nv1.jpg" alt="recipe 2">
+                <h2>Sheet Pan Chicken and Sweet Potatoes</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="nvpop2">
+                <img src="nv2.jpg" alt="recipe 2">
+                <h2>Grilled Pork Chops with Peach Arugula Salad</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="nvpop3">
+                <img src="nv3.jpg" alt="recipe 2">
+                <h2>Cheesy Chicken Nachos With Avocado and Radish</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="nvpop4">
+                <img src="nv4.jpg" alt="recipe 2">
+                <h2>Sheet Pan Chicken Thighs With Salsa Verde</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="nvpop5">
+                <img src="nv5.jpg" alt="recipe 2">
+                <h2>Egg Salad Toast with Fresh Herbs and Capers
+                </h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="nvpop6">
+                <img src="nv6.jpg" alt="recipe 2">
+                <h2>Crispy Chicken Cutlets With Artichoke Dressing </h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="nvpop7">
+                <img src="nv7.jpg" alt="recipe 2">
+                <h2>Chicken Curry in a Hurry</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="nvpop8">
+                <img src="nv8.jpg" alt="recipe 2">
+                <h2>Pasta With Turkey and Broccoli </h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="nvpop9">
+                <img src="nv9.jpg" alt="recipe 2">
+                <h2>Southwestern Beef Chili With Corn</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="nvpop10">
+                <img src="nv10.jpg" alt="recipe 2">
+                <h2>Spanish Omelet With Potatoes and Chorizo</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="nvpop11">
+                <img src="nv11.jpg" alt="recipe 2">
+                <h2>Smoky-Sweet Steak Supper </h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="nvpop12">
+                <img src="nv12.jpg" alt="recipe 2">
+                <h2>Fishermen's Soup</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+        </section>
+    </div>
+
+    <div id="breakfast">
+        <h2 style="text-align: center;">BREAKFAST RECEIPIES</h2>
+
+        <section class="recipe-listings" class="bf">
+            <div class="recipe-card" id="bpop1">
+                <img src="nv1.jpg" alt="recipe 2">
+                <h2>Sheet Pan Chicken and Sweet Potatoes</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="bpop2">
+                <img src="nv2.jpg" alt="recipe 2">
+                <h2>Grilled Pork Chops with Peach Arugula Salad</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="bpop3">
+                <img src="nv3.jpg" alt="recipe 2">
+                <h2>Cheesy Chicken Nachos With Avocado and Radish</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="bpop4">
+                <img src="nv4.jpg" alt="recipe 2">
+                <h2>Sheet Pan Chicken Thighs With Salsa Verde</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="bpop5">
+                <img src="nv5.jpg" alt="recipe 2">
+                <h2>Egg Salad Toast with Fresh Herbs and Capers
+                </h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="bpop6">
+                <img src="nv6.jpg" alt="recipe 2">
+                <h2>Crispy Chicken Cutlets With Artichoke Dressing </h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="bpop7">
+                <img src="nv7.jpg" alt="recipe 2">
+                <h2>Chicken Curry in a Hurry</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="bpop8">
+                <img src="nv8.jpg" alt="recipe 2">
+                <h2>Pasta With Turkey and Broccoli </h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="bpop9">
+                <img src="nv9.jpg" alt="recipe 2">
+                <h2>Southwestern Beef Chili With Corn</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="bpop10">
+                <img src="nv10.jpg" alt="recipe 2">
+                <h2>Spanish Omelet With Potatoes and Chorizo</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="bpop11">
+                <img src="nv11.jpg" alt="recipe 2">
+                <h2>Smoky-Sweet Steak Supper </h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+
+            <div class="recipe-card" id="bpop12">
+                <img src="nv12.jpg" alt="recipe 2">
+                <h2>Fishermen's Soup</h2>
+                <button class="view-btn">Show recipe</button>
+            </div>
+        </section>
+    </div>
+
+    <div id="popup-details">
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg1.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Cauliflower Tartine With Romesco Sauce</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Preheat oven to 400°F. Thinly slice half of the cauliflower half (leaving core
+                intact) and set aside remaining cauliflower half. Place cauliflower slices and raisins in a heat-safe
+                bowl.
+                Place water, 1/2 cup of the vinegar, 1 of the smashed garlic cloves, and ½ teaspoon of the salt in a
+                saucepan
+                and bring to a simmer over medium-high. Remove from heat and pour mixture over cauliflower and raisins
+                in bowl
+                and stir gently. Allow to pickle at room temperature at least 15 minutes or up to 30 minutes. Drain
+                pickling
+                liquid; discard or reserve for another use. <br />
+
+                Step 2 : While cauliflower mixture pickles, cut remaining half of the cauliflower half into small
+                florets and
+                spread in an even layer on a rimmed baking sheet. Toss with 1 teaspoon of the oil and 1/8 teaspoon of
+                the
+                salt. Place in preheated oven and roast until cauliflower is tender and golden brown on the underside,
+                18 to
+                20 minutes, stirring halfway through cook time. Remove from oven. <br />
+
+                Step 3 : Place almonds, roasted bell peppers, tomato paste, black pepper, crushed red pepper, and
+                remaining 1
+                tablespoon vinegar, 1 smashed clove garlic, ½ teaspoon salt, and 2 tablespoons oil in a food processor
+                and
+                process until mostly smooth, about 1 minute, stopping to scrape down sides as needed. <br />
+
+                Step 4 : Spread sauce evenly over toasted bread slices. Top with pickled cauliflower slices and roasted
+                cauliflower florets. Garnish with parsley and crushed red pepper. <br /></p>
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                ½ small (1 pound, 3 ounces) head cauliflower
+                2 tablespoons golden raisins
+                ½ cup water
+                ½ cup plus one tablespoon apple cider vinegar, divided
+                2 cloves garlic, smashed, divided
+                1 ⅛ teaspoon fine sea salt, divided
+                2 tablespoons plus one teaspoon olive oil, divided
+                ⅓ cup roasted unsalted almonds
+                ⅓ cup drained roasted red bell peppers (from 1 [12 ounce] jar)
+                1 tablespoon canned tomato paste
+                ⅛ teaspoon freshly ground black pepper
+                ⅛ teaspoon crushed red pepper, plus more for serving
+                2 (1-inch-thick) sourdough bread slices, toasted
+                Fresh flat-leaf parsley leaves and tender stems, for serving</p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg2.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Meatless Meatball Subs</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step : 1 Heat 2 tablespoons of the oil in a large nonstick skillet over medium-high. Add eggplant and
+                season
+                with ¼ teaspoon of the salt. Cook, stirring often, until softened and golden brown in spots, about 5
+                minutes.
+                Add mushrooms, shallot, and garlic and cook, stirring often, until mushrooms are golden, 4 to 5 minutes.
+                Transfer to a food processor and let mixture cool at least 5 minutes. Wipe skillet clean. <br />
+
+                Step : 2 Add rice, panko, flour, pepper, and remaining¾teaspoon salt to food processor. Pulse until
+                mixture
+                comes together, about 15 times. (Mixture will be sticky.) Form into 8 balls (about the size of golf
+                balls).
+                <br />
+
+                Step : 3 Heat remaining 1 tablespoon oil in a large nonstick skillet over medium-high. Add meatballs and
+                cook,
+                turning occasionally, until browned on all sides, 8 to 10 minutes. Remove from heat. <br />
+
+                Step : 4 Preheat broiler with oven rack 8 inches from heat source. Place toasted rolls on a rimmed
+                baking sheet.
+                Spread ½ cup of the tomato sauce evenly inside rolls. Top with meatballs, remaining ½ cup tomato sauce,
+                and
+                cheese. Broil until cheese is melted and subs are warmed through, 1 to 2 minutes. Top with the torn
+                basil.
+                <br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                3 tablespoons olive oil, divided
+                1 small eggplant, unpeeled and chopped (2½ cups)
+                1 teaspoon fine sea salt, divided
+                6 ounces fresh cremini mushrooms, sliced (2½ cups)
+                1 shallot, chopped
+                1 clove garlic, chopped
+                ½ cup cooked brown rice, at room temperature
+                ¼ cup panko (Japanese breadcrumbs)
+                1 tablespoon whole-wheat flour
+                ¼ teaspoon freshly ground black pepper
+                2 (6-inch) whole-wheat hoagie rolls, split and toasted
+                1 cup Italian-style tomato sauce (homemade, jarred, or from 1 [14-ounce] can), divided
+                1 ounce Parmesan cheese, grated (about ¼ cup)
+                Fresh basil, torn for serving
+                </p>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg3.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Mushroom White Pizza</h2>
+
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Preheat oven to 450ºF with rack in lowest position. On a baking sheet lined with parchment
+                paper,
+                stretch out the dough to a 16-by-10-inch rectangle. Bake until lightly golden, about 7 minutes. <br />
+
+                Step 2 : Meanwhile, heat 2 tablespoons of oil in a large nonstick skillet over medium-high. Add
+                mushrooms and
+                cook, stirring occasionally, until golden, about 12 minutes. Remove from heat and stir in parsley and ½
+                teaspoon
+                <br />
+                each salt and pepper.
+
+                Step 3 : Stir together ricotta, mozzarella, garlic, and the remaining 2 tablespoons of oil, ½ teaspoon
+                salt, and
+                ¼ teaspoon pepper in a medium bowl. Spread over prebaked crust, leaving a 1-inch border. Arrange
+                mushroom
+                mixture on top. <br />
+
+                Step 4 : Bake until golden, about 12 minutes. Cut into slices and serve. <br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                1 pound store-bought pizza dough, at room temperature
+                ¼ cup extra-virgin olive oil, divided
+                1 pound mixed mushrooms, sliced
+                ¼ cup chopped fresh parsley
+                1 teaspoon kosher salt, divided
+                ¾ teaspoon freshly ground black pepper, divided
+                ½ cup whole-milk ricotta
+                4 ounces (1 cup) shredded low-moisture mozzarella
+                1 clove garlic, finely chopped
+                </p>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg4.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Slow Cooker Vegetarian Chili With Sweet Potatoes</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : In a 4- to 6-quart slow cooker, combine the onion, bell pepper, garlic, chili powder, cumin,
+                cocoa,
+                cinnamon, 1 teaspoon salt, and ¼ teaspoon black pepper. <br />
+
+                Step 2 : Add the tomatoes (and their liquid), beans, sweet potato, and 1 cup water. <br />
+
+                Step 3 : Cover and cook until the sweet potatoes are tender and the chili has thickened, on low for 7 to
+                8 hours
+                or on high for 4 to 5 hours (this will shorten total recipe time). <br />
+
+                Step 4 : Serve the chili with the sour cream, scallions, radishes, and tortilla chips. <br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                1 medium red onion, chopped
+                1 green bell pepper, chopped
+                4 garlic cloves, chopped
+                1 tablespoon chili powder
+                1 tablespoon ground cumin
+                2 teaspoons unsweetened cocoa powder
+                ¼ teaspoon ground cinnamon
+                kosher salt and black pepper
+                1 28-ounce can fire-roasted diced tomatoes
+                1 15.5-ounce can black beans, rinsed
+                1 15.5-ounce can kidney beans, rinsed
+                1 medium sweet potato (about 8 ounces), peeled and cut into 1⁄2-inch pieces
+                sour cream, sliced scallions, sliced radishes, and tortilla chips, for serving
+                </p>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg5.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Thai Curry Vegetable and Tofu Soup</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Place the curry paste and ginger in a medium pot. Whisk in the broth, coconut milk, and 1
+                teaspoon salt
+                and bring to a boil. <br />
+                Step 2 : Add the mushrooms, green beans, and carrots and simmer until just tender, 3 to 5 minutes.
+                <br />
+                Step 3 : Add the tofu and snow peas and simmer until the snow peas are bright green, about 1 minute
+                more.<br />
+                Step 4 : Stir in the lime juice. Sprinkle with the basil and serve with the chili garlic sauce.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+
+                1 tablespoon Thai red curry paste
+                1 teaspoon grated fresh ginger
+                2 cups low-sodium vegetable broth
+                1 14-ounce can coconut milk
+                kosher salt
+                ½ pound shiitake mushrooms, stems removed and caps thinly sliced
+                4 ounces green beans, halved
+                2 carrots, halved lengthwise and sliced crosswise
+                14 ounces extra-firm tofu, drained and cut into cubes
+                4 ounces snow peas
+                2 tablespoons fresh lime juice
+                ¼ cup torn fresh basil leaves
+                Asian chili garlic sauce, for serving
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg6.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Roasted Eggplant With Miso and Sesame Seeds</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Place sesame seeds in a nonstick skillet over medium-low. Cook, stirring occasionally, until
+                fragrant,
+                7 to 8 minutes. <br />
+
+                Step 2 : Preheat oven to 450 F. Place eggplant slices on a baking sheet lined with parchment paper, and
+                brush
+                both sides of each round with olive oil. Bake until tender, flipping halfway through, about 18 minutes.
+                Let cool
+                on baking sheet 10 minutes. <br />
+
+                Step 3 : Whisk together miso, ginger, sesame oil, honey, water, vinegar, and chili paste in a small
+                bowl. <br />
+
+                Step 4 : Increase oven temperature to broil. Spread about 2 teaspoons of miso mixture on each eggplant
+                round,
+                and broil until fragrant and browned in spots, about 4 minutes. Sprinkle with toasted sesame seeds and
+                scallions. <br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                1 tablespoon sesame seeds
+                1 ½ pounds eggplant, sliced into ½-inch rounds
+                2 tablespoons olive oil
+                ⅓ cup white miso
+                1 tablespoon grated fresh ginger
+                1 tablespoon sesame oil
+                1 tablespoon honey
+                1 tablespoon water
+                2 teaspoons rice vinegar
+                1 teaspoon roasted red chili paste (such as Thai Kitchen)
+                ⅓ cup chopped fresh scallions
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg7.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Red Lentil Curry</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Heat the oil in a large saucepan over medium-high heat. Add the ginger, garlic, and scallion
+                whites and
+                cook, stirring frequently, until softened, 2 to 3 minutes. Stir in the curry powder. Add the carrots,
+                potato,
+                lentils, broth, ¾ teaspoon salt, and ¼ teaspoon pepper. Bring to a boil, reduce heat, and simmer,
+                stirring
+                occasionally, until the lentils and vegetables are tender, 15 to 20 minutes. <br />
+
+                Step 2 : Sprinkle the curry with the scallion greens and serve with the naan and lime wedges. <br />
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                3 tablespoons canola oil
+                2 tablespoons chopped fresh ginger
+                2 cloves garlic, chopped
+                8 scallions, sliced, white and green parts separated
+                1 tablespoon curry powder
+                4 medium carrots (about 8 ounces), chopped
+                1 large russet potato (about 10 ounces), peeled and cut into 1-inch pieces
+                1 cup red lentils
+                4 cups low-sodium vegetable broth
+                kosher salt and black pepper
+                naan bread and lime wedges, for serving
+                </p>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg8.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Roasted Eggplant and Olive Pasta Salad</h2>
+
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Preheat oven to 475°F. Toss eggplant and olives with 3 tablespoons of the oil on a rimmed
+                baking sheet.
+                Roast in a single layer until eggplant is tender, 18 to 20 minutes. <br />
+                Step 2 : Meanwhile, cook pasta according to package directions; drain well. Whisk together vinegar,
+                salt,
+                pepper, chopped oregano, and remaining 3 tablespoons oil in a small bowl. <br />
+                Step 3 : Toss together pasta, eggplant-olive mixture, feta, tomatoes, and dressing. Garnish with oregano
+                leaves.
+                <br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                1 medium eggplant, cut into ¾-in. pieces (about 6 cups)
+                1 cup pitted, drained kalamata olives
+                6 tablespoons olive oil, divided
+                8 ounces casarecce, fusilli, or other short pasta
+                2 tablespoons red wine vinegar
+                1 teaspoon kosher salt
+                ¼ teaspoon black pepper
+                1 tablespoon chopped fresh oregano, plus leaves for garnish
+                2 ounces feta cheese, crumbled (about ½ cup)
+                1 ½ cups (about 8 oz.) multicolored cherry tomatoes, halved
+                </p>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg9.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Vegetarian Tacos With Goat Cheese</h2>
+
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Heat the oil in a large nonstick skillet over medium-high heat.<br />
+                Step 2 : Add the tofu, chili powder, ½ teaspoon salt, and ¼ teaspoon pepper. Cook, tossing occasionally,
+                until
+                golden brown, 4 to 5 minutes.<br />
+                Step 3 : Add the corn. Cook, tossing, until heated through, about 2 minutes.<br />
+                Step 4 : Add the spinach and ¼ teaspoon each salt and pepper. Toss until wilted.<br />
+                Step 5 : Fill the tortillas with the tofu mixture, goat cheese, and salsa. <br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                1 tablespoon olive oil
+                1 14-ounce package extra-firm tofu, drained, patted dry, and crumbled
+                1 ½ teaspoons chili powder
+                kosher salt and black pepper
+                1 10-ounce package frozen corn (2 cups), thawed
+                1 5-ounce package baby spinach (about 6 loosely packed cups)
+                8 small flour tortillas, warmed
+                ¾ cup crumbled fresh goat cheese (3 ounces)
+                ¾ cup store-bought refrigerated salsa
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg10.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Parm e Pepe Spaghetti</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Bring 3 quarts generously salted water to a boil in a large saucepan. Cook pasta according to
+                package
+                directions for al dente. Do not drain.<br />
+                Step 2 : Meanwhile, stir together parsley and walnuts in a small bowl. Heat oil in a large pot over
+                medium. Add
+                pepper; cook, stirring constantly, until fragrant and sizzling, 30 seconds to 1 minute. Turn off
+                heat.<br />
+                Step 3 : Using tongs, transfer cooked pasta from saucepan to pot with pepper mixture. Ladle 1¼ cups
+                cooking
+                water into pot with pasta. Add butter and stir constantly for 1 minute. Gradually add cheese, stirring
+                constantly and vigorously, until cheese is melted and a creamy sauce coats pasta, about 2 minutes (add
+                more
+                cooking water as needed). Stir in salt. Serve sprinkled with walnut mixture.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                1 16-oz. pkg. spaghetti
+                ¼ cup finely chopped fresh flat-leaf parsley
+                ¼ cup toasted walnuts, chopped
+                2 tablespoons olive oil
+                2 ½ teaspoons coarsely ground black pepper
+                2 tablespoons unsalted butter
+                4 ounces Parmesan cheese, finely grated (about 1½ cups)
+                ¾ teaspoon kosher salt, plus more for water
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg11.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Superfood Lentil Salad</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Preheat broiler with rack in upper third. Stir zucchini, 2 tablespoons oil, ½ teaspoon salt, and ¼
+                teaspoon
+                black pepper on a rimmed baking sheet; spread in an even layer. Broil until charred in spots and
+                softened, 8 to
+                10 minutes. Transfer to a large bowl. Add raisins, crushed red pepper, and 2 tablespoons vinegar; stir
+                to
+                combine. Set aside.<br />
+                Bring 2 cups water, lentils, garlic, and ½ teaspoon salt to a boil in a saucepan over medium-high. Cover
+                and
+                reduce heat to low. Cook until lentils are just tender, about 20 minutes. Drain well; discard garlic.
+                Let cool
+                for 10 minutes. Transfer to bowl with zucchini.<br />
+                Place white and light green scallion slices, sunflower seeds, mustard, and remaining 2 tablespoons
+                vinegar, ½
+                teaspoon salt, and ¼ teaspoon black pepper in a food processor. Pulse until a coarse paste forms. Scrape
+                sides
+                of bowl and add remaining ⅓ cup oil. Pulse until incorporated, 2 to 3 pulses.<br />
+                Stir vinaigrette into lentil mixture with sliced dark green scallion tops. Top with microgreens and
+                sunflower
+                seeds.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                2 large zucchini, cut into 1-inch chunks (3 cups)
+                ⅓ cup plus 2 tablespoons olive oil, divided
+                1 ½ teaspoons kosher salt, divided
+                ½ teaspoon freshly ground black pepper, divided
+                ⅓ cup golden raisins
+                ¼ teaspoons crushed red pepper
+                ¼ cup apple cider vinegar, divided
+                1 cup dried beluga lentils or French green lentils, rinsed
+                1 clove garlic, smashed
+                2 scallions, trimmed and thinly sliced, white and green parts separated
+                ½ cup unsalted roasted sunflower seeds, plus more for serving
+                ½ teaspoon Dijon mustard
+                Microgreens or sprouts, for serving
+                </p>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="veg12.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Black Bean and Oat Burger</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Process beans, oats, garlic, soy sauce, and chili powder in a food processor until ingredients begin to
+                come
+                together, about 30 seconds.<br />
+                Transfer bean mixture to a large bowl and stir in scallions.<br />
+                Shape mixture into 4 (¾-cup) patties, and then let them stand at room temperature 5 minutes or
+                refrigerate up to
+                3 hours.<br />
+                Heat oil in a large nonstick skillet over medium-high. Cook patties in hot oil until browned, about 5
+                minutes
+                per side.<br />
+                Place 1 patty on each hamburger bun bottom, and top each with ¼ cup salsa. Add lettuce, tomato slices,
+                and red
+                onion slices, and cover with bun tops.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                2 (15-oz) cans black beans, drained and rinsed
+                ¾ cup uncooked old-fashioned regular rolled oats
+                2 garlic cloves, finely chopped
+                1 tablespoon soy sauce
+                2 teaspoons chili powder
+                3 scallions, thinly sliced
+                2 tablespoons canola oil
+                4 hamburger buns
+                1 cup salsa
+                Lettuce, tomato slices, red onion slices
+                </p>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv1.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Sheet Pan Chicken and Sweet Potatoes</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Preheat oven to 450°F. Arrange the chicken and sweet potatoes side by side in a single layer on
+                a large
+                rimmed baking sheet. Season with the sage, salt, and pepper and drizzle with 2 tablespoons of the oil,
+                tossing
+                to coat. Lay the bacon on top of the sweet potatoes.<br />
+                Step 2 : Roast until a meat thermometer inserted into the thickest portion of a thigh registers 165°F,
+                20 to 25
+                minutes.<br />
+                Step 3 : Meanwhile, toss together the watercress, lemon juice, and the remaining 1 tablespoon of olive
+                oil and
+                season to taste with salt and pepper.<br />
+                Step 4 : Serve the chicken with the sweet potatoes and salad, with the bacon crumbled over the
+                top.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                4 bone-in, skin-on chicken leg quarters (about 2 lb.)
+                2 medium sweet potatoes, peeled and cut into 1-in. wedges
+                1 teaspoon chopped fresh sage
+                ¾ teaspoon kosher salt, plus more to taste
+                ½ teaspoon black pepper, plus more to taste
+                3 tablespoons olive oil, divided
+                3 slices bacon
+                3 cups baby watercress
+                1 tablespoon fresh lemon juice
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv2.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Grilled Pork Chops with Peach Arugula Salad</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Preheat grill to high (450°F to 500°F) and lightly oil grates. Whisk vinegar, honey, garlic, ½
+                teaspoon
+                each salt and pepper, and 5 tablespoons oil.<br />
+                Step 2 : Pat pork chops dry and brush with remaining 1 tablespoon oil. Season both sides with remaining
+                1
+                teaspoon salt and teaspoon pepper.<br />
+                Step 3 : Grill, uncovered, flipping once, until a meat thermometer inserted in thickest portion
+                registers 145°F,
+                3 to 4 minutes per side. Let rest for 10 minutes.<br />
+                Step 4 : Meanwhile, toss arugula with parsley and peaches. Serve with pork, drizzled with
+                vinaigrette.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                ¼ cup balsamic vinegar
+                1 tablespoon honey
+                1 clove garlic, finely chopped
+                1 ½ teaspoons kosher salt, divided
+                1 teaspoon freshly ground black pepper, divided
+                6 tablespoons olive oil, divided, plus more for grill grates
+                4 ½-in.-thick bone-in pork chops (about 2 lb.)
+                4 cups arugula (about 4 oz.)
+                1 cup loosely packed fresh flat-leaf parsley leaves, torn
+                4 ripe peaches, nectarines, or apricots, pitted and sliced
+                </p>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv3.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Cheesy Chicken Nachos With Avocado and Radish</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Preheat oven to 400°F. Line a baking sheet with aluminum foil.<br />
+                Step 2 : Spread chips evenly across baking sheet and top with chicken and Cheddar. Bake until cheese is
+                melted,
+                about 10 minutes.<br />
+                Step 3 : Top nachos with pico de gallo, radishes, cotija, avocado, cilantro, and jalapeño and hot sauce,
+                if
+                using. Serve immediately.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                1 11-oz. pkg. tortilla chips
+                2 cups shredded rotisserie chicken
+                6 ounces sharp Cheddar cheese, shredded (about 1½ cups)
+                1 cup prepared pico de gallo or salsa
+                2 radishes, thinly sliced
+                2 ounces cotija cheese, crumbled (about ½ cup)
+                1 ripe avocado, sliced
+                ½ cup loosely packed fresh cilantro leaves
+                1 jalapeño, thinly sliced (optional)
+                Hot sauce, for serving (optional)
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv4.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Sheet Pan Chicken Thighs With Salsa Verde</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Preheat oven to 425°F. Toss onion with 1 tablespoon oil and ¼ teaspoon each salt and pepper on
+                a rimmed
+                baking sheet. Roast until onion begins to soften, about 10 minutes.<br />
+                Step 2 : Meanwhile, heat remaining 1 tablespoon oil in a large skillet over medium-high. Pat chicken dry
+                with
+                paper towels and season with remaining ½ teaspoon each salt and pepper. Add chicken to skillet and cook
+                until
+                golden brown, about 3 minutes. Flip and continue to cook until golden brown, about 3 minutes more.
+                Transfer
+                chicken to baking sheet with onion and roast until chicken is cooked through, 10 to 12 minutes.<br />
+                Step 3 : Transfer chicken and onion to a platter. Spoon salsa verde over top and top with cilantro and
+                cheese.
+                Serve with tortillas and lime wedges, if desired.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                1 large red onion, sliced into 8 wedges
+                2 tablespoons olive oil, divided
+                ¾ teaspoon kosher salt, divided
+                ¾ teaspoon freshly ground black pepper, divided
+                4 boneless, skinless chicken thighs (about 1 lb.)
+                ½ cup salsa verde
+                ½ cup packed fresh cilantro leaves and tender stems
+                2 ounces queso fresco or cotija cheese, crumbled (about 1/3 cup)
+                Warm corn tortillas and lime wedges, for serving (optional)
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv5.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Egg Salad Toast with Fresh Herbs and Capers</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Whisk vinegar, mustard, salt, and pepper. Whisk in oil.<br />
+                Step 2 : Place eggs in a medium saucepan and add enough water to cover; bring to a boil. Remove from
+                heat and
+                cover. Let stand for 7 minutes. Transfer to a large bowl of ice water to cool.<br />
+                Step 3 : Peel eggs and slice. Gently toss eggs, capers, parsley, and radicchio with vinaigrette. Divide
+                among
+                toasts and serve immediately.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                ¼ cup Champagne or white wine vinegar
+                1 tablespoon Dijon mustard
+                1 teaspoon kosher salt
+                ½ teaspoon freshly ground black pepper
+                ⅓ cup olive oil
+                8 large eggs
+                ¼ cup drained capers
+                ½ cup torn fresh flat-leaf parsley leaves
+                1 head radicchio, cored and sliced
+                8 slices crusty bread, toasted
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv6.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Crispy Chicken Cutlets With Artichoke Dressing
+                </h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Preheat oven to 450°F with racks in upper and lower thirds. Line 2 rimmed baking sheets with
+                aluminum
+                foil; coat 1 of the sheets with 2 tablespoons oil.<br />
+                Step 2 : Place beaten eggs in a shallow dish. Place panko in a separate shallow dish. Dip chicken
+                cutlets in
+                egg; shake off excess and dredge chicken in panko. Arrange on oiled baking sheet. Drizzle with melted
+                butter.<br />
+                Step 3 : Toss asparagus, 1 tablespoon oil, ½ teaspoon salt, and ¼ teaspoon pepper on second baking
+                sheet; spread
+                in an even layer. Place asparagus on lower oven rack and chicken on upper rack. Roast asparagus until
+                crisp-tender, about 6 minutes; remove from oven. Continue roasting chicken until cooked through, about 4
+                minutes
+                more. Increase oven temperature to broil. Broil chicken until golden brown in spots, 2 to 4 minutes.
+                Remove from
+                oven; season chicken with remaining ½ teaspoon salt.</br>
+                Step 4 : Toss artichoke hearts, parsley, cheese, lemon juice, and remaining 1 tablespoon oil and ½
+                teaspoon
+                pepper in a medium bowl. Top chicken with artichoke dressing. Serve with asparagus and lemon
+                wedges.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                ¼ cup olive oil, divided
+                2 eggs, beaten
+                2 cups panko
+                4 4-ounce chicken breast cutlets
+                3 tablespoons unsalted butter, melted
+                2 pounds fresh asparagus, trimmed
+                1 teaspoon kosher salt, divided
+                ¾ teaspoon freshly ground black pepper, divided
+                1 12-ounce jar marinated artichoke hearts, drained and chopped
+                1 cup chopped fresh flat-leaf parsley (from 1 bunch)
+                2 ounces Parmesan cheese, shaved (about 1 cup)
+                2 teaspoons fresh lemon juice (from 1 lemon), plus wedges for serving
+                </p>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv7.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Chicken Curry in a Hurry</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Cook the rice according to the package directions.<br />
+                Step 2 : Heat the oil in a skillet over medium-low heat. Add the onion and cook, occasionally stirring,
+                for 7
+                minutes.<br />
+                Step 3 : Sprinkle with the curry powder and cook, stirring, for 1 minute.<br />
+                Step 4 : Add the yogurt and cream and simmer gently for 3 minutes. Stir in the salt, pepper, and
+                tomatoes (if
+                desired). Remove from heat.<br />
+                Step 5 : Divide the rice and chicken among individual bowls, spoon the sauce over the top, and sprinkle
+                with the
+                cilantro.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                1 cup white rice
+                1 ½ tablespoons olive oil
+                1 small yellow onion, thinly sliced
+                2 teaspoons curry powder
+                ½ cup plain yogurt
+                ¾ cup heavy cream
+                ½ teaspoon kosher salt
+                ¼ teaspoon black pepper
+                1 14.5-ounce can diced tomatoes, drained (optional)
+                meat from 1 rotisserie chicken, sliced or shredded
+                ¼ cup fresh cilantro leaves, roughly chopped
+                </p>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv8.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Pasta With Turkey and Broccoli</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Cook pasta according to package directions, adding broccoli during the last minute. Drain and
+                return
+                pasta and broccoli to the pot.<br />
+                Step 2 : Meanwhile, heat 1 tablespoon oil in a large skillet over medium-high heat. Add turkey, garlic,
+                fennel
+                seed, and red pepper and cook, breaking up the meat with a spoon, until browned, 3 to 5 minutes, and
+                then season
+                with ½ teaspoon salt.<br />
+                Step 3 : Toss the turkey mixture with pasta and broccoli and the remaining 2 tablespoons of oil. Serve
+                with
+                Parmesan.<br />
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                ¾ pound orecchiette
+                2 cups broccoli florets
+                3 tablespoons olive oil, divided
+                1 pound ground turkey
+                2 cloves garlic, chopped
+                1 teaspoon fennel seed
+                ½ teaspoon crushed red pepper
+                ½ teaspoon kosher salt
+                Parmesan, for serving
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv9.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Southwestern Beef Chili With Corn</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Heat the oil in a large saucepan over medium-high heat. Add the carrots, onion, and poblano and
+                cook,
+                stirring, for 3 minutes.<br />
+                Step 2 : Add the beef and cook, breaking it up with a spoon, until no longer pink, 3 to 5 minutes.<br />
+                Step 3 : Add the tomato paste and cook, stirring, until it is slightly darkened, 1 minute.<br />
+                Step 4 : Stir in the beans, chili powder, 3 cups water, ½ teaspoon salt, and ¼ teaspoon pepper.<br />
+                Step 5 : Simmer over medium heat until the vegetables are tender, 8 to 10 minutes. Stir in the
+                corn.<br />
+                Step 6 : Divide the chili among bowls and top with the Cheddar and scallions.<br />
+
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                1 tablespoon olive oil
+                2 carrots, chopped
+                1 onion, chopped
+                1 poblano or bell pepper, chopped
+                ½ pound ground beef
+                2 tablespoons tomato paste
+                2 15-ounce cans black beans, rinsed
+                1 tablespoon chili powder
+                kosher salt and black pepper
+                ½ cup corn kernels (from 1 ear, or frozen and thawed)
+                ½ cup grated Cheddar (2 ounces)
+                2 scallions, sliced
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv10.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Spanish Omelet With Potatoes and Chorizo</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Heat oven to 400° F. Heat 1 tablespoon of the oil in a large ovenproof skillet over medium
+                heat. Add
+                the yellow onion and cook for 5 minutes.<br />
+                Step 2 : Add the chorizo, potatoes, and ½ teaspoon each salt and pepper and cook, covered, stirring
+                occasionally, until the potatoes are tender, 10 minutes.<br />
+                Step 3 : Stir in the parsley. Pour in the eggs and stir to distribute the ingredients. Sprinkle with the
+                cheese
+                and transfer to oven.<br />
+                Step 4 : Bake the omelet until puffed and brown around the edges and a knife comes out clean, about 15
+                minutes.<br />
+                Step 5 : Divide the lettuce and red onion among plates and drizzle with the remaining oil. Cut the
+                omelet into
+                wedges and serve with the salad.<br />
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                3 tablespoons extra-virgin olive oil
+                1 large yellow onion, chopped
+                2 ounces Spanish chorizo (cured sausage), sliced into thin half-moons
+                ¾ pound red potatoes, diced
+                kosher salt and pepper
+                ¾ cup flat-leaf parsley, roughly chopped
+                10 large eggs, beaten
+                1 cup (4 ounces) shredded Manchego or sharp Cheddar
+                1 small head green-leaf lettuce
+                ½ small red onion, thinly sliced
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv11.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Smoky-Sweet Steak Supper</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Stir sugar, paprika, and 1 teaspoon salt in a small bowl. Rub mixture onto steak.<br />
+                Step 2 : Preheat grill to high (450°F to 500°F) and oil grates. Grill steak, covered, flipping once,
+                until grill
+                marks appear, 4 to 6 minutes per side for medium-rare. Transfer to a cutting board and let rest for 10
+                minutes.<br />
+                Step 3 : Meanwhile, bring a large saucepan of generously salted water to a boil over high. Add green
+                beans and
+                cook until crisp-tender, about 4 minutes. Drain and rinse under cold water. Whisk oil, vinegar, anchovy
+                paste,
+                and remaining ½ teaspoon salt in a large bowl. Add tomatoes, green beans, and parsley; toss to combine
+                <br />
+                Step 4 :Slice steak against the grain into ½-inch-thick slices. Serve with green bean salad.<br />
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                2 teaspoons light brown sugar
+                1 teaspoon smoked paprika
+                1 ½ teaspoons kosher salt, divided, plus more for water
+                1 2-lb. strip steak (1½-in. thick)
+                1 pound trimmed fresh green beans
+                ¼ cup olive oil, plus more for grill grates
+                2 tablespoons red wine vinegar
+                1 teaspoon anchovy paste
+                1 pint multicolored cherry tomatoes, halved
+                ½ cup roughly chopped fresh flat-leaf parsley leaves
+                </p>
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="view" class="popup hidden">
+            <div id="recipe-details">
+                <div id="recipe-images">
+                    <img src="nv12.jpg" class="recipe-images">
+                </div>
+                <h2 id="recipe-title">Fishermen's Soup</h2>
+                <p id="recipe-todo">
+                <h4>Steps to do :</h4>
+                Step 1 : Heat oil in a saucepan over medium-high heat, and then add leeks, garlic, and fennel. Cook,
+                stirring
+                occasionally, until just softened, 3 to 4 minutes.<br />
+                Step 2 : Add sherry, tomatoes and their juices, red pepper, and salt. Bring to a boil and then reduce
+                heat and
+                simmer for 15 minutes.<br />
+                Step 3 : Add fish and mussels, and then simmer gently until the fish is cooked through and mussels have
+                opened,
+                4 to 5 minutes.<br />
+                Step 4 : Stir in parsley and serve with olives.<br />
+                <p id="recipe-ingredients">
+                <h4>Ingredients to add:</h4>
+                1 tablespoon olive oil
+                2 leeks (white and light green parts), cut into ¼-inch-thick half-moons
+                2 cloves garlic, sliced
+                1 small fennel bulb, quartered and sliced
+                ⅓ cup dry sherry
+                1 28-ounce can diced tomatoes
+                ¼ teaspoon crushed red pepper
+                1 teaspoon kosher salt
+                1 pound skinless halibut fillet (or other firm white fish), cut into 2-inch pieces
+                ½ pound mussels, scrubbed
+                1 cup fresh flat-leaf parsley, roughly chopped
+                ½ cup mixed olives
+                </p>
+
+                <button id="close-btn">Close</button>
+            </div>
+        </div>
+
+        <div id="popup-details">
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg1.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Cauliflower Tartine With Romesco Sauce</h2>
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Step 1 : Preheat oven to 400°F. Thinly slice half of the cauliflower half (leaving core
+                    intact) and set aside remaining cauliflower half. Place cauliflower slices and raisins in a
+                    heat-safe bowl.
+                    Place water, 1/2 cup of the vinegar, 1 of the smashed garlic cloves, and ½ teaspoon of the salt in a
+                    saucepan
+                    and bring to a simmer over medium-high. Remove from heat and pour mixture over cauliflower and
+                    raisins in bowl
+                    and stir gently. Allow to pickle at room temperature at least 15 minutes or up to 30 minutes. Drain
+                    pickling
+                    liquid; discard or reserve for another use. <br />
+
+                    Step 2 : While cauliflower mixture pickles, cut remaining half of the cauliflower half into small
+                    florets and
+                    spread in an even layer on a rimmed baking sheet. Toss with 1 teaspoon of the oil and 1/8 teaspoon
+                    of the
+                    salt. Place in preheated oven and roast until cauliflower is tender and golden brown on the
+                    underside, 18 to
+                    20 minutes, stirring halfway through cook time. Remove from oven. <br />
+
+                    Step 3 : Place almonds, roasted bell peppers, tomato paste, black pepper, crushed red pepper, and
+                    remaining 1
+                    tablespoon vinegar, 1 smashed clove garlic, ½ teaspoon salt, and 2 tablespoons oil in a food
+                    processor and
+                    process until mostly smooth, about 1 minute, stopping to scrape down sides as needed. <br />
+
+                    Step 4 : Spread sauce evenly over toasted bread slices. Top with pickled cauliflower slices and
+                    roasted
+                    cauliflower florets. Garnish with parsley and crushed red pepper. <br /></p>
+
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+                    ½ small (1 pound, 3 ounces) head cauliflower
+                    2 tablespoons golden raisins
+                    ½ cup water
+                    ½ cup plus one tablespoon apple cider vinegar, divided
+                    2 cloves garlic, smashed, divided
+                    1 ⅛ teaspoon fine sea salt, divided
+                    2 tablespoons plus one teaspoon olive oil, divided
+                    ⅓ cup roasted unsalted almonds
+                    ⅓ cup drained roasted red bell peppers (from 1 [12 ounce] jar)
+                    1 tablespoon canned tomato paste
+                    ⅛ teaspoon freshly ground black pepper
+                    ⅛ teaspoon crushed red pepper, plus more for serving
+                    2 (1-inch-thick) sourdough bread slices, toasted
+                    Fresh flat-leaf parsley leaves and tender stems, for serving</p>
+
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg2.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Meatless Meatball Subs</h2>
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Step : 1 Heat 2 tablespoons of the oil in a large nonstick skillet over medium-high. Add eggplant
+                    and season
+                    with ¼ teaspoon of the salt. Cook, stirring often, until softened and golden brown in spots, about 5
+                    minutes.
+                    Add mushrooms, shallot, and garlic and cook, stirring often, until mushrooms are golden, 4 to 5
+                    minutes.
+                    Transfer to a food processor and let mixture cool at least 5 minutes. Wipe skillet clean. <br />
+
+                    Step : 2 Add rice, panko, flour, pepper, and remaining¾teaspoon salt to food processor. Pulse until
+                    mixture
+                    comes together, about 15 times. (Mixture will be sticky.) Form into 8 balls (about the size of golf
+                    balls).
+                    <br />
+
+                    Step : 3 Heat remaining 1 tablespoon oil in a large nonstick skillet over medium-high. Add meatballs
+                    and cook,
+                    turning occasionally, until browned on all sides, 8 to 10 minutes. Remove from heat. <br />
+
+                    Step : 4 Preheat broiler with oven rack 8 inches from heat source. Place toasted rolls on a rimmed
+                    baking sheet.
+                    Spread ½ cup of the tomato sauce evenly inside rolls. Top with meatballs, remaining ½ cup tomato
+                    sauce, and
+                    cheese. Broil until cheese is melted and subs are warmed through, 1 to 2 minutes. Top with the torn
+                    basil.
+                    <br />
+
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+                    3 tablespoons olive oil, divided
+                    1 small eggplant, unpeeled and chopped (2½ cups)
+                    1 teaspoon fine sea salt, divided
+                    6 ounces fresh cremini mushrooms, sliced (2½ cups)
+                    1 shallot, chopped
+                    1 clove garlic, chopped
+                    ½ cup cooked brown rice, at room temperature
+                    ¼ cup panko (Japanese breadcrumbs)
+                    1 tablespoon whole-wheat flour
+                    ¼ teaspoon freshly ground black pepper
+                    2 (6-inch) whole-wheat hoagie rolls, split and toasted
+                    1 cup Italian-style tomato sauce (homemade, jarred, or from 1 [14-ounce] can), divided
+                    1 ounce Parmesan cheese, grated (about ¼ cup)
+                    Fresh basil, torn for serving
+                    </p>
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg3.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Mushroom White Pizza</h2>
+
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Step 1 : Preheat oven to 450ºF with rack in lowest position. On a baking sheet lined with parchment
+                    paper,
+                    stretch out the dough to a 16-by-10-inch rectangle. Bake until lightly golden, about 7 minutes.
+                    <br />
+
+                    Step 2 : Meanwhile, heat 2 tablespoons of oil in a large nonstick skillet over medium-high. Add
+                    mushrooms and
+                    cook, stirring occasionally, until golden, about 12 minutes. Remove from heat and stir in parsley
+                    and ½ teaspoon
+                    <br />
+                    each salt and pepper.
+
+                    Step 3 : Stir together ricotta, mozzarella, garlic, and the remaining 2 tablespoons of oil, ½
+                    teaspoon salt, and
+                    ¼ teaspoon pepper in a medium bowl. Spread over prebaked crust, leaving a 1-inch border. Arrange
+                    mushroom
+                    mixture on top. <br />
+
+                    Step 4 : Bake until golden, about 12 minutes. Cut into slices and serve. <br />
+
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+                    1 pound store-bought pizza dough, at room temperature
+                    ¼ cup extra-virgin olive oil, divided
+                    1 pound mixed mushrooms, sliced
+                    ¼ cup chopped fresh parsley
+                    1 teaspoon kosher salt, divided
+                    ¾ teaspoon freshly ground black pepper, divided
+                    ½ cup whole-milk ricotta
+                    4 ounces (1 cup) shredded low-moisture mozzarella
+                    1 clove garlic, finely chopped
+                    </p>
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg4.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Slow Cooker Vegetarian Chili With Sweet Potatoes</h2>
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Step 1 : In a 4- to 6-quart slow cooker, combine the onion, bell pepper, garlic, chili powder,
+                    cumin, cocoa,
+                    cinnamon, 1 teaspoon salt, and ¼ teaspoon black pepper. <br />
+
+                    Step 2 : Add the tomatoes (and their liquid), beans, sweet potato, and 1 cup water. <br />
+
+                    Step 3 : Cover and cook until the sweet potatoes are tender and the chili has thickened, on low for
+                    7 to 8 hours
+                    or on high for 4 to 5 hours (this will shorten total recipe time). <br />
+
+                    Step 4 : Serve the chili with the sour cream, scallions, radishes, and tortilla chips. <br />
+
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+                    1 medium red onion, chopped
+                    1 green bell pepper, chopped
+                    4 garlic cloves, chopped
+                    1 tablespoon chili powder
+                    1 tablespoon ground cumin
+                    2 teaspoons unsweetened cocoa powder
+                    ¼ teaspoon ground cinnamon
+                    kosher salt and black pepper
+                    1 28-ounce can fire-roasted diced tomatoes
+                    1 15.5-ounce can black beans, rinsed
+                    1 15.5-ounce can kidney beans, rinsed
+                    1 medium sweet potato (about 8 ounces), peeled and cut into 1⁄2-inch pieces
+                    sour cream, sliced scallions, sliced radishes, and tortilla chips, for serving
+                    </p>
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg5.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Thai Curry Vegetable and Tofu Soup</h2>
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Step 1 : Place the curry paste and ginger in a medium pot. Whisk in the broth, coconut milk, and 1
+                    teaspoon salt
+                    and bring to a boil. <br />
+                    Step 2 : Add the mushrooms, green beans, and carrots and simmer until just tender, 3 to 5 minutes.
+                    <br />
+                    Step 3 : Add the tofu and snow peas and simmer until the snow peas are bright green, about 1 minute
+                    more.<br />
+                    Step 4 : Stir in the lime juice. Sprinkle with the basil and serve with the chili garlic
+                    sauce.<br />
+
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+
+                    1 tablespoon Thai red curry paste
+                    1 teaspoon grated fresh ginger
+                    2 cups low-sodium vegetable broth
+                    1 14-ounce can coconut milk
+                    kosher salt
+                    ½ pound shiitake mushrooms, stems removed and caps thinly sliced
+                    4 ounces green beans, halved
+                    2 carrots, halved lengthwise and sliced crosswise
+                    14 ounces extra-firm tofu, drained and cut into cubes
+                    4 ounces snow peas
+                    2 tablespoons fresh lime juice
+                    ¼ cup torn fresh basil leaves
+                    Asian chili garlic sauce, for serving
+                    </p>
+
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg6.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Roasted Eggplant With Miso and Sesame Seeds</h2>
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Step 1 : Place sesame seeds in a nonstick skillet over medium-low. Cook, stirring occasionally,
+                    until fragrant,
+                    7 to 8 minutes. <br />
+
+                    Step 2 : Preheat oven to 450 F. Place eggplant slices on a baking sheet lined with parchment paper,
+                    and brush
+                    both sides of each round with olive oil. Bake until tender, flipping halfway through, about 18
+                    minutes. Let cool
+                    on baking sheet 10 minutes. <br />
+
+                    Step 3 : Whisk together miso, ginger, sesame oil, honey, water, vinegar, and chili paste in a small
+                    bowl. <br />
+
+                    Step 4 : Increase oven temperature to broil. Spread about 2 teaspoons of miso mixture on each
+                    eggplant round,
+                    and broil until fragrant and browned in spots, about 4 minutes. Sprinkle with toasted sesame seeds
+                    and
+                    scallions. <br />
+
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+                    1 tablespoon sesame seeds
+                    1 ½ pounds eggplant, sliced into ½-inch rounds
+                    2 tablespoons olive oil
+                    ⅓ cup white miso
+                    1 tablespoon grated fresh ginger
+                    1 tablespoon sesame oil
+                    1 tablespoon honey
+                    1 tablespoon water
+                    2 teaspoons rice vinegar
+                    1 teaspoon roasted red chili paste (such as Thai Kitchen)
+                    ⅓ cup chopped fresh scallions
+                    </p>
+
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg7.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Red Lentil Curry</h2>
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Step 1 : Heat the oil in a large saucepan over medium-high heat. Add the ginger, garlic, and
+                    scallion whites and
+                    cook, stirring frequently, until softened, 2 to 3 minutes. Stir in the curry powder. Add the
+                    carrots, potato,
+                    lentils, broth, ¾ teaspoon salt, and ¼ teaspoon pepper. Bring to a boil, reduce heat, and simmer,
+                    stirring
+                    occasionally, until the lentils and vegetables are tender, 15 to 20 minutes. <br />
+
+                    Step 2 : Sprinkle the curry with the scallion greens and serve with the naan and lime wedges. <br />
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+                    3 tablespoons canola oil
+                    2 tablespoons chopped fresh ginger
+                    2 cloves garlic, chopped
+                    8 scallions, sliced, white and green parts separated
+                    1 tablespoon curry powder
+                    4 medium carrots (about 8 ounces), chopped
+                    1 large russet potato (about 10 ounces), peeled and cut into 1-inch pieces
+                    1 cup red lentils
+                    4 cups low-sodium vegetable broth
+                    kosher salt and black pepper
+                    naan bread and lime wedges, for serving
+                    </p>
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg8.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Roasted Eggplant and Olive Pasta Salad</h2>
+
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Step 1 : Preheat oven to 475°F. Toss eggplant and olives with 3 tablespoons of the oil on a rimmed
+                    baking sheet.
+                    Roast in a single layer until eggplant is tender, 18 to 20 minutes. <br />
+                    Step 2 : Meanwhile, cook pasta according to package directions; drain well. Whisk together vinegar,
+                    salt,
+                    pepper, chopped oregano, and remaining 3 tablespoons oil in a small bowl. <br />
+                    Step 3 : Toss together pasta, eggplant-olive mixture, feta, tomatoes, and dressing. Garnish with
+                    oregano leaves.
+                    <br />
+
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+                    1 medium eggplant, cut into ¾-in. pieces (about 6 cups)
+                    1 cup pitted, drained kalamata olives
+                    6 tablespoons olive oil, divided
+                    8 ounces casarecce, fusilli, or other short pasta
+                    2 tablespoons red wine vinegar
+                    1 teaspoon kosher salt
+                    ¼ teaspoon black pepper
+                    1 tablespoon chopped fresh oregano, plus leaves for garnish
+                    2 ounces feta cheese, crumbled (about ½ cup)
+                    1 ½ cups (about 8 oz.) multicolored cherry tomatoes, halved
+                    </p>
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg9.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Vegetarian Tacos With Goat Cheese</h2>
+
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Step 1 : Heat the oil in a large nonstick skillet over medium-high heat.<br />
+                    Step 2 : Add the tofu, chili powder, ½ teaspoon salt, and ¼ teaspoon pepper. Cook, tossing
+                    occasionally, until
+                    golden brown, 4 to 5 minutes.<br />
+                    Step 3 : Add the corn. Cook, tossing, until heated through, about 2 minutes.</br>
+                    Step 4 : Add the spinach and ¼ teaspoon each salt and pepper. Toss until wilted.<br />
+                    Step 5 : Fill the tortillas with the tofu mixture, goat cheese, and salsa. <br />
+
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+                    1 tablespoon olive oil
+                    1 14-ounce package extra-firm tofu, drained, patted dry, and crumbled
+                    1 ½ teaspoons chili powder
+                    kosher salt and black pepper
+                    1 10-ounce package frozen corn (2 cups), thawed
+                    1 5-ounce package baby spinach (about 6 loosely packed cups)
+                    8 small flour tortillas, warmed
+                    ¾ cup crumbled fresh goat cheese (3 ounces)
+                    ¾ cup store-bought refrigerated salsa
+                    </p>
+
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg10.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Parm e Pepe Spaghetti</h2>
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Step 1 : Bring 3 quarts generously salted water to a boil in a large saucepan. Cook pasta according
+                    to package
+                    directions for al dente. Do not drain.<br />
+                    Step 2 : Meanwhile, stir together parsley and walnuts in a small bowl. Heat oil in a large pot over
+                    medium. Add
+                    pepper; cook, stirring constantly, until fragrant and sizzling, 30 seconds to 1 minute. Turn off
+                    heat.<br />
+                    Step 3 : Using tongs, transfer cooked pasta from saucepan to pot with pepper mixture. Ladle 1¼ cups
+                    cooking
+                    water into pot with pasta. Add butter and stir constantly for 1 minute. Gradually add cheese,
+                    stirring
+                    constantly and vigorously, until cheese is melted and a creamy sauce coats pasta, about 2 minutes
+                    (add more
+                    cooking water as needed). Stir in salt. Serve sprinkled with walnut mixture.<br />
+
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+                    1 16-oz. pkg. spaghetti
+                    ¼ cup finely chopped fresh flat-leaf parsley
+                    ¼ cup toasted walnuts, chopped
+                    2 tablespoons olive oil
+                    2 ½ teaspoons coarsely ground black pepper
+                    2 tablespoons unsalted butter
+                    4 ounces Parmesan cheese, finely grated (about 1½ cups)
+                    ¾ teaspoon kosher salt, plus more for water
+                    </p>
+
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg11.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Superfood Lentil Salad</h2>
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Preheat broiler with rack in upper third. Stir zucchini, 2 tablespoons oil, ½ teaspoon salt, and ¼
+                    teaspoon
+                    black pepper on a rimmed baking sheet; spread in an even layer. Broil until charred in spots and
+                    softened, 8 to
+                    10 minutes. Transfer to a large bowl. Add raisins, crushed red pepper, and 2 tablespoons vinegar;
+                    stir to
+                    combine. Set aside.<br />
+                    Bring 2 cups water, lentils, garlic, and ½ teaspoon salt to a boil in a saucepan over medium-high.
+                    Cover and
+                    reduce heat to low. Cook until lentils are just tender, about 20 minutes. Drain well; discard
+                    garlic. Let cool
+                    for 10 minutes. Transfer to bowl with zucchini.<br />
+                    Place white and light green scallion slices, sunflower seeds, mustard, and remaining 2 tablespoons
+                    vinegar, ½
+                    teaspoon salt, and ¼ teaspoon black pepper in a food processor. Pulse until a coarse paste forms.
+                    Scrape sides
+                    of bowl and add remaining ⅓ cup oil. Pulse until incorporated, 2 to 3 pulses.<br />
+                    Stir vinaigrette into lentil mixture with sliced dark green scallion tops. Top with microgreens and
+                    sunflower
+                    seeds.<br />
+
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+                    2 large zucchini, cut into 1-inch chunks (3 cups)
+                    ⅓ cup plus 2 tablespoons olive oil, divided
+                    1 ½ teaspoons kosher salt, divided
+                    ½ teaspoon freshly ground black pepper, divided
+                    ⅓ cup golden raisins
+                    ¼ teaspoons crushed red pepper
+                    ¼ cup apple cider vinegar, divided
+                    1 cup dried beluga lentils or French green lentils, rinsed
+                    1 clove garlic, smashed
+                    2 scallions, trimmed and thinly sliced, white and green parts separated
+                    ½ cup unsalted roasted sunflower seeds, plus more for serving
+                    ½ teaspoon Dijon mustard
+                    Microgreens or sprouts, for serving
+                    </p>
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+
+            <div id="view" class="popup hidden">
+                <div id="recipe-details">
+                    <div id="recipe-images">
+                        <img src="veg12.jpg" class="recipe-images">
+                    </div>
+                    <h2 id="recipe-title">Black Bean and Oat Burger</h2>
+                    <p id="recipe-todo">
+                    <h4>Steps to do :</h4>
+                    Process beans, oats, garlic, soy sauce, and chili powder in a food processor until ingredients begin
+                    to come
+                    together, about 30 seconds.<br />
+                    Transfer bean mixture to a large bowl and stir in scallions.<br />
+                    Shape mixture into 4 (¾-cup) patties, and then let them stand at room temperature 5 minutes or
+                    refrigerate up to
+                    3 hours.<br />
+                    Heat oil in a large nonstick skillet over medium-high. Cook patties in hot oil until browned, about
+                    5 minutes
+                    per side.<br />
+                    Place 1 patty on each hamburger bun bottom, and top each with ¼ cup salsa. Add lettuce, tomato
+                    slices, and red
+                    onion slices, and cover with bun tops.<br />
+
+                    <p id="recipe-ingredients">
+                    <h4>Ingredients to add:</h4>
+                    2 (15-oz) cans black beans, drained and rinsed
+                    ¾ cup uncooked old-fashioned regular rolled oats
+                    2 garlic cloves, finely chopped
+                    1 tablespoon soy sauce
+                    2 teaspoons chili powder
+                    3 scallions, thinly sliced
+                    2 tablespoons canola oil
+                    4 hamburger buns
+                    1 cup salsa
+                    Lettuce, tomato slices, red onion slices
+                    </p>
+                    <button id="close-btn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="title4">
+        <h2 style="text-align: center">ABOUT US</h2>
+        <div id="about">
+            <p><i class="fa fa-address-book" style="color:#f2f2f2"></i><label>CONTACT NUMBER : 8976524879</label></p>
+            <p><i class="fa fa-location-arrow" style="color:#f2f2f2"></i><label>ADDRESS : 547, Anna Nagar, Madurai -
+                    6250 20</label></p>
+
+        </div>
+    </div>
+    <footer>
+        <label style="text-align: center" class="footer1">Developed by:</label>
+        <label class="footer2">Akshaya Muthukumar</label>
+    </footer>
+</body>
+
+</html>
